@@ -59,9 +59,7 @@
                             <h1>{{ .Site.Data.params.name }}</h1>
                             <p>{{ .Site.Data.params.position }}</p>
                         </header>
-                                    {{ if .Site.Data.params.contact.enable }}
-                                        {{ partial "contact.html" . }}
-                                    {{ end }}
+
                         <footer>
                             <ul class="icons">
                                 {{ range .Site.Data.params.social }}
