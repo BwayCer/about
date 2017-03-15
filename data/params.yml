@@ -27,17 +27,21 @@ position: 不為無益之事 何以悅有涯之生
 
 social:
 
-    - title: Twitter
-      icon: fa-twitter
-      link: "#"
+    - title: 首頁
+      icon: fa-home
+      link: "https://bwaycer.github.io/blog"
 
-    - title: Instagram
-      icon: fa-instagram
-      link: "#"
+    # - title: 經歷
+    #   icon: fa-puzzle-piece
+    #   link: "#"
 
-    - title: Facebook
-      icon: fa-facebook
-      link: "#"
+    - title: 紙飛機
+      icon: fa-telegram
+      link: https://t.me/bwaycer
+
+    - title: 輯倉儲中心
+      icon: fa-github
+      link: https://github.com/BwayCer
 
 
 # Footer settings
