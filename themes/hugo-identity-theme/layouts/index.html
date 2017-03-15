@@ -13,8 +13,8 @@
         <title>{{ .Site.Title }}</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="{{ .Site.BaseURL }}/images/icons/{{ .Site.Params.favicon }}" type="image/x-icon" />
-        <link rel="apple-touch-icon-precomposed" href="{{ .Site.BaseURL }}/images/icons/{{ .Site.Params.appletouchicon }}" />
+        <link rel="icon" href="{{ .Site.BaseURL }}/images/icons/{{ .Site.Data.params.favicon }}" type="image/x-icon" />
+        <link rel="apple-touch-icon-precomposed" href="{{ .Site.BaseURL }}/images/icons/{{ .Site.Data.params.appletouchicon }}" />
         <!--[if lte IE 8]><script src="{{ .Site.BaseURL }}/assets/js/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="{{ .Site.BaseURL }}/assets/css/main.css" />
         <!--[if lte IE 9]><link rel="stylesheet" href="{{ .Site.BaseURL }}/assets/css/ie9.css" /><![endif]-->
@@ -26,23 +26,23 @@
                 background-color: #ffffff;
                 background-image: url("images/overlay.png"),
                                   -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)),
-                                  url("images/backgrounds/{{ .Site.Params.background }}");
+                                  url("images/backgrounds/{{ .Site.Data.params.background }}");
                 background-image: url("images/overlay.png"),
                                   -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)),
-                                  url("images/backgrounds/{{ .Site.Params.background }}");
+                                  url("images/backgrounds/{{ .Site.Data.params.background }}");
                 background-image: url("images/overlay.png"),
                                   -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)),
-                                  url("images/backgrounds/{{ .Site.Params.background }}");
+                                  url("images/backgrounds/{{ .Site.Data.params.background }}");
                 background-image: url("images/overlay.png"),
                                   linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)),
-                                  url("images/backgrounds/{{ .Site.Params.background }}");
+                                  url("images/backgrounds/{{ .Site.Data.params.background }}");
                 background-repeat: repeat, no-repeat, no-repeat;
                 background-size: 100px 100px, cover, cover;
                 background-position: top left, center center, bottom center;
                 background-attachment: fixed, fixed, fixed;
             }
         </style>
-    {{ range .Site.Params.custom_css }}
+    {{ range .Site.Data.params.custom_css }}
         <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
     {{ end }}
         {{ .Hugo.Generator }}
@@ -55,16 +55,16 @@
                 <!-- Main -->
                     <section id="main">
                         <header>
-                            <span class="avatar"><img src="{{ .Site.BaseURL }}/images/avatars/{{ .Site.Params.avatar }}" alt="" /></span>
-                            <h1>{{ .Site.Params.name }}</h1>
-                            <p>{{ .Site.Params.position }}</p>
+                            <span class="avatar"><img src="{{ .Site.Data.params.avatar }}" alt="" /></span>
+                            <h1>{{ .Site.Data.params.name }}</h1>
+                            <p>{{ .Site.Data.params.position }}</p>
                         </header>
-                                    {{ if .Site.Params.contact.enable }}
+                                    {{ if .Site.Data.params.contact.enable }}
                                         {{ partial "contact.html" . }}
                                     {{ end }}
                         <footer>
                             <ul class="icons">
-                                {{ range .Site.Params.social }}
+                                {{ range .Site.Data.params.social }}
                                     <li><a href="{{ .link }}" class="{{ .icon }}">{{ .title }}</a></li>
                                 {{ end }}
                             </ul>
@@ -74,7 +74,7 @@
                 <!-- Footer -->
                     <footer id="footer">
                         <ul class="copyright">
-                            <li>&copy; {{ .Site.Params.footer.copyright }}</li>
+                            <li>&copy; {{ .Site.Data.params.footer.copyright }}</li>
                             <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
                         </ul>
                     </footer>
