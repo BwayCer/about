@@ -397,6 +397,8 @@ dl {
         margin-bottom: 1.5em;
     }
         #main .avatar img {
+            width: 120px;
+            height: 120px;
             display: block;
             margin: 0 auto;
             border-radius: 100%;
