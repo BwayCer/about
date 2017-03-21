@@ -1,0 +1,17 @@
+.ghpage {
+    max-width: 300px;
+    margin: 2em;
+}
+    .ghpage li {
+        background: #F3CD52;
+        border: solid 3px #faad4d;
+        border-radius: 25pt;
+        font-size: 14pt;
+        padding: 0.2em 0.6em;
+        margin: 0.2em;
+    }
+    .ghpage li:hover {
+        background: #faad4d;
+        color: #EEE;
+    }
+
