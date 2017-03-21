@@ -1,0 +1,25 @@
+---
+## 客製化 風格樣式表 及 爪哇腳本語言
+
+_noscript:
+    css:
+        - noscript.css
+    js: ~
+
+# 網站共享
+_siteShare:
+    css:
+        - reset.css
+    js: ~
+
+about:
+    css:
+        - about/main.css
+    js: ~
+
+puzzlepiece:
+    css:
+        - about/main.css
+        - puzzlepiece/main.css
+    js: ~
+...

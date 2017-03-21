@@ -1,0 +1,52 @@
+## 網站圖標
+
+favicon:
+    ico: /assets/favicon/s128.ico
+    png: /assets/favicon/s128.png
+    # ico_s128: /assets/favicon/s128.ico
+    # ico_s72: /assets/favicon/s72.ico
+    # ico_s48: /assets/favicon/s48.ico
+    # png_s128: /assets/favicon/s128.png
+    # png_s72: /assets/favicon/s72.png
+    # png_s48: /assets/favicon/s48.png
+
+
+# Images settings
+# Icons, backgrounds and avatars folders are placed in theme's static/images folder.
+# You may place your images in corresponding folders and then set only filenames below to
+# change page's appearance
+
+background: bg3.jpg
+avatar: https://avatars3.githubusercontent.com/u/16593611
+
+
+# 個人資訊
+
+name: 張本微
+position: 不為無益之事 何以悅有涯之生
+
+
+# Social settings
+# You may change these with your social links or add others
+
+social:
+    - title: 日誌
+      icon: fa-book
+      link: https://bwaycer.github.io/blog
+
+    - title: 紙飛機
+      icon: fa-telegram
+      link: https://t.me/bwaycer
+
+    - title: 輯倉儲中心
+      icon: fa-github
+      link: https://github.com/BwayCer
+
+ghpage:
+    - title: about
+      link: /about
+    - title: blog
+      link: /blog
+    - title: hugo_tutorial.hugo
+      link: /hugo_tutorial.hugo
+...

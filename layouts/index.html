@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<!--
+    Identity by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Hugo Identity by Pavel Kanyshev
+    github.com/aerohub
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+{{ $importAssets := .Site.Data.assets.about }}
+
+<html>
+<html>
+    <head>
+        <title>{{ .Site.Title }}</title>
+        <meta charset="utf-8" />
+
+        {{ partial "icon.html" . }}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {{ partial "importHeadAssets.html" (dict "assets" .Site.Data.assets "importCSS" $importAssets) }}
+
+        {{ .Hugo.Generator }}
+    </head>
+    <body class="is-loading">
+        {{ if .IsTranslated }}
+            <nav class="langSelect">
+                <ul class="vlist">
+                    {{ range .Translations }}
+                        <li>
+                            <a href="{{ .Permalink }}">{{ index $.Site.Data.langName (printf "%s" .Lang) }}</a>
+                        </li>
+                    {{ end}}
+                </ul>
+            </nav>
+        {{ end }}
+
+        <!-- Main -->
+        <section id="main">
+            {{ template "about/nav.html" (dict "location" "card") }}
+
+            <span class="avatar"><img src="{{ .Site.Data.main.avatar }}" alt="" /></span>
+            <h1>{{ i18n "myName" }}</h1>
+            <p>{{ i18n "position" }}</p>
+
+            <ul class="vlist social">
+                {{ range .Site.Data.main.social }}
+                    <li><a href="{{ .link }}" class="icon {{ .icon }}"></a></li>
+                {{ end }}
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            Design: <a href="http://html5up.net">HTML5 UP</a>
+        </footer>
+
+        <!-- Scripts -->
+        <script>
+            if ( 'addEventListener' in window ) {
+                window.addEventListener( 'load', function () {
+                    document.body.classList.remove( 'is-loading' )
+                } );
+            }
+        </script>
+
+        {{ template "_internal/google_analytics.html" . }}
+
+        {{ if $importAssets }}
+            {{ partial "importJS.html" $importAssets }}
+        {{ end }}
+    </body>
+</html>

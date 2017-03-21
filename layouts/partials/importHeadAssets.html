@@ -1,0 +1,12 @@
+{{- if .assets._noscript -}}
+    {{ partial "noscript.html" .assets._noscript }}
+{{- end -}}
+
+{{- if .assets._siteShare -}}
+    {{ partial "importCSS.html" .assets._siteShare }}
+{{- end -}}
+
+{{- if .importCSS -}}
+    {{ partial "importCSS.html" .importCSS }}
+{{- end -}}
+

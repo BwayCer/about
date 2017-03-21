@@ -1,4 +1,41 @@
-baseurl: https://bwaycer.github.io/about/
+---
+## 網站資訊
+baseURL: https://bwaycer.github.io/about/
 languageCode: zh
 title: 關於我
+
+
+## 多國語系
+
+defaultContentLanguage: zh
+defaultContentLanguageInSubdir: false
+enableMissingTranslationPlaceholders: false # （預設值： false） 缺少翻譯時使用佔位符（placeholder）替代默認值或者空值
+languages:
+    zh:
+        title: 關於我
+        weight: 0
+    en:
+        title: About
+        weight: 1
+    ja:
+        title: "ついて"
+        weight: 2
+
+
+## 額外功能
+
+googleAnalytics: UA-93985618-1
+
+
+## 開發設定值
+
+newContentEditor: vim
+metaDataFormat: yaml
+verbose: true
+disableLiveReload: false
+
+
+## 生成文檔
+
+relativeURLs: true # （預設值： false） 是否啟用相對路徑
 ...

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+{{ $importAssets := .Site.Data.assets.puzzlepiece }}
+
+<html>
+<html>
+    <head>
+        <title>{{ .Site.Title }}</title>
+        <meta charset="utf-8" />
+
+        {{ partial "icon.html" . }}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {{ partial "importHeadAssets.html" (dict "assets" .Site.Data.assets "importCSS" $importAssets) }}
+
+        {{ .Hugo.Generator }}
+    </head>
+    <body class="is-loading">
+        {{ if .IsTranslated }}
+            <nav class="langSelect">
+                <ul class="vlist">
+                    {{ range .Translations }}
+                        <li>
+                            <a href="{{ .Permalink }}">{{ index $.Site.Data.langName (printf "%s" .Lang) }}</a>
+                        </li>
+                    {{ end}}
+                </ul>
+            </nav>
+        {{ end }}
+
+        <!-- Main -->
+        <section id="main">
+            {{ template "about/nav.html" (dict "location" "puzzlepiece") }}
+
+            <ul class="vlist ghpage">
+                {{ range .Site.Data.main.ghpage }}
+                    <li><a href="{{ .link }}">{{ .title }}</a></li>
+                {{ end }}
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            Design: <a href="http://html5up.net">HTML5 UP</a>
+        </footer>
+
+        <!-- Scripts -->
+        <script>
+            if ( 'addEventListener' in window ) {
+                window.addEventListener( 'load', function () {
+                    document.body.classList.remove( 'is-loading' );
+                } );
+            }
+        </script>
+
+        {{ template "_internal/google_analytics.html" . }}
+
+        {{ if $importAssets }}
+            {{ partial "importJS.html" $importAssets }}
+        {{ end }}
+    </body>
+</html>

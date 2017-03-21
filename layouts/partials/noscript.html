@@ -1,0 +1,10 @@
+
+<noscript>
+    {{ range .css }}
+        <link rel="stylesheet" href="/{{ . }}" />
+    {{ end }}
+    {{ range .js }}
+        <script src="/{{ . }}"></script>
+    {{ end }}
+</noscript>
+
