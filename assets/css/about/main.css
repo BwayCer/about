@@ -106,6 +106,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     padding: 2.2em 1.5em;
     perspective: 1000px;
@@ -117,12 +118,20 @@ body {
         }
     }
 
+body:before {
+    content: '';
+    display: block;
+}
+
 .langSelect {
     position: absolute;
     top: 0.6em;
     right: 1em;
     line-height: 1.6em;
 }
+    .langSelect ul {
+        font-size: 1em;
+    }
     .langSelect li {
         display: inline-block;
         margin: 0 0 0 0.45em;
