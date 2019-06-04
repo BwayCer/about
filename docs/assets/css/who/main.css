@@ -1,0 +1,273 @@
+@charset "UTF-8";
+body, .h00 {
+  margin: auto;
+  word-break: break-word;
+  word-wrap: break-word;
+  font-size: 1rem;
+  line-height: 1.4em;
+}
+
+.h24 {
+  font-size: 2.4rem;
+}
+
+.h23 {
+  font-size: 2.3rem;
+}
+
+.h22 {
+  font-size: 2.2rem;
+}
+
+.h21 {
+  font-size: 2.1rem;
+}
+
+.h20 {
+  font-size: 2rem;
+}
+
+.h19 {
+  font-size: 1.9rem;
+}
+
+.h18 {
+  font-size: 1.8rem;
+}
+
+.h17 {
+  font-size: 1.7rem;
+}
+
+.h16 {
+  font-size: 1.6rem;
+}
+
+.h15 {
+  font-size: 1.5rem;
+}
+
+.h14 {
+  font-size: 1.4rem;
+}
+
+.h13 {
+  font-size: 1.3rem;
+}
+
+.h12 {
+  font-size: 1.2rem;
+}
+
+.h11 {
+  font-size: 1.1rem;
+}
+
+.h10 {
+  font-size: 1rem;
+}
+
+.h09 {
+  font-size: 0.9rem;
+}
+
+.h08 {
+  font-size: 0.8rem;
+}
+
+.h07 {
+  font-size: 0.7rem;
+}
+
+.h06 {
+  font-size: 0.6rem;
+}
+
+.h05 {
+  font-size: 0.5rem;
+}
+
+.h24, .h23, .h22, .h21, .h20,
+.h19, .h18, .h17, .h16, .h15,
+.h14, .h13, .h12, .h11, .h10,
+.h09, .h08, .h07, .h06, .h05 {
+  line-height: 1.4em;
+}
+
+.hh12 {
+  line-height: 1.2em;
+}
+
+.hh14 {
+  line-height: 1.4em;
+}
+
+.hh16 {
+  line-height: 1.6em;
+}
+
+.hb1 {
+  font-weight: 100;
+}
+
+.hb3 {
+  font-weight: 300;
+}
+
+.hb6 {
+  font-weight: 600;
+}
+
+.hb9 {
+  font-weight: 900;
+}
+
+.aboutMe img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.aboutMe_social {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.aboutMe_social > li {
+  display: inline-block;
+}
+
+.aboutMe_avatar .makeImgWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.aboutMe_avatar .makeImgWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+body::before, body::after {
+  content: "";
+  display: block;
+}
+
+@media (max-width: 319.98px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 320px) and (max-width: 479.98px) {
+  html {
+    font-size: 5vw;
+  }
+}
+@media (min-width: 480px) and (max-width: 719.98px) {
+  html {
+    font-size: 2.777vw;
+  }
+}
+@media (min-width: 720px) and (max-width: 959.98px) {
+  html {
+    font-size: 2.083vw;
+  }
+}
+@media (min-width: 960px) and (max-width: 1679.98px) {
+  html {
+    font-size: 1.488vw;
+  }
+}
+@media (min-width: 1680px) and (max-width: 1919.98px) {
+  html {
+    font-size: 1.25vw;
+  }
+}
+@media (min-width: 1920px) {
+  html {
+    font-size: 24px;
+  }
+}
+body {
+  height: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(90deg, #b2f1f9 -7%, #fed3cc);
+  font-family: "Noto Sans TC";
+}
+
+.aboutMe {
+  margin: 4.2vh 1.5em;
+  width: 19rem;
+  padding: 2rem 1.5rem;
+  background: #ffffff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "標楷體", "Noto Sans TC";
+  text-align: center;
+  cursor: default;
+}
+.aboutMe_avatar {
+  margin: auto;
+  width: 39%;
+  padding-top: 39%;
+  border: solid 1em #fff;
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.aboutMe_avatarWrap {
+  position: relative;
+}
+.aboutMe_avatarWrap::before {
+  position: absolute;
+  top: 50%;
+  left: -1.5rem;
+  right: -1.5rem;
+  content: "";
+  display: block;
+  border-top: solid 1px #c8cccf;
+}
+.aboutMe_name {
+  color: #313f47;
+  margin-bottom: 1rem;
+  letter-spacing: 0.16em;
+}
+.aboutMe_motto {
+  margin-bottom: 1.7rem;
+}
+.aboutMe_social .markIcon {
+  font-size: 1.2rem;
+  margin: 0.46rem 0.42rem;
+  width: 3rem;
+  height: 3rem;
+  border: solid 1px #c8cccf;
+  display: block;
+  border-radius: 100%;
+  box-sizing: border-box;
+  line-height: 3rem;
+  color: inherit;
+  text-align: center;
+}
+.aboutMe_social .markIcon::before {
+  color: #fff;
+  text-shadow: 1.2px 0px 0px #c8cccf, -1.2px 0px 0px #c8cccf, 0px 1.2px 0px #c8cccf, 0px -1.2px 0px #c8cccf;
+}
+.aboutMe_social .markIcon:hover {
+  border-color: #ec74ff;
+}
+.aboutMe_social .markIcon:hover::before {
+  color: #ff7496;
+  text-shadow: initial;
+}
+
+/*# sourceMappingURL=main.css.map */

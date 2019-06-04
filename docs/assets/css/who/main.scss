@@ -1,0 +1,110 @@
+@import '../../../../gitModules/private/bway.scss/lib/function.scss';
+
+@include sfFont_baseSize((12, 24, 20, 20, null, null, 25, 24));
+
+$bodyFontFamily: "Noto Sans TC";
+body {
+    @extend %sfProp_hvCenterFlexBetween;
+    height: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(90deg, #b2f1f9 -7%, #fed3cc);
+    font-family: $bodyFontFamily;
+}
+
+.aboutMe {
+    $cardPadding: 1.5rem;
+
+    margin: 4.2vh 1.5em;
+    width: 19rem;
+    padding: 2rem $cardPadding;
+    background: #ffffff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "標楷體", $bodyFontFamily;
+    text-align: center;
+    cursor: default;
+
+    img {
+        @extend %sfProp_img100;
+    }
+
+    &_avatar {
+        margin: auto;
+        width: 39%;
+        padding-top: 39%;
+        border: solid 1em #fff;
+        position: relative;
+        background: #fff;
+        border-radius: 50%;
+        overflow: hidden;
+
+        &Wrap {
+            position: relative;
+
+            &::before {
+                $stretch: $cardPadding * -1;
+                @include sfProp_position(absolute, 50%, $stretch, $stretch);
+                content: '';
+                display: block;
+                border-top: solid 1px #c8cccf;
+            }
+        }
+
+        .makeImgWrap {
+            @extend %sfProp_absFull;
+            @extend %sfProp_hvCenterFlex;
+        }
+    }
+
+    &_name {
+        color: #313f47;
+        margin-bottom: 1rem;
+        letter-spacing: 0.16em;
+    }
+
+    &_motto {
+        margin-bottom: 1.7rem;
+    }
+
+    &_social {
+        $amount3_side: 0.42rem;
+        $amount4_side: 0.3rem;
+        $amountX_size: 3rem;
+        $amountX_side: $amount3_side;
+
+        @extend %sfProp_ulCenterList;
+
+        .markIcon {
+            font-size: 1.2rem;
+            // TODO war ul.li 清單有 20px 的莫名空間被使用
+            margin: 0.46rem $amountX_side;
+            width: $amountX_size;
+            height: $amountX_size;
+            border: solid 1px #c8cccf;
+            display: block;
+            border-radius: 100%;
+            box-sizing: border-box;
+            line-height: $amountX_size;
+            color: inherit;
+            text-align: center;
+
+            &::before {
+                color: #fff;
+                text-shadow: 1.2px 0px 0px  #c8cccf,
+                             -1.2px 0px 0px #c8cccf,
+                             0px 1.2px 0px  #c8cccf,
+                             0px -1.2px 0px #c8cccf;
+            }
+
+            &:hover {
+                border-color: #ec74ff;
+
+                &::before {
+                    color: #ff7496;
+                    text-shadow: initial;
+                }
+            }
+        }
+    }
+}
+
