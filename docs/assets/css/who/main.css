@@ -263,10 +263,10 @@ body {
   text-shadow: 1.2px 0px 0px #c8cccf, -1.2px 0px 0px #c8cccf, 0px 1.2px 0px #c8cccf, 0px -1.2px 0px #c8cccf;
 }
 .aboutMe_social .markIcon:hover {
-  border-color: #ec74ff;
+  border-color: #d26f60;
 }
 .aboutMe_social .markIcon:hover::before {
-  color: #ff7496;
+  color: #d26f60;
   text-shadow: initial;
 }
 
